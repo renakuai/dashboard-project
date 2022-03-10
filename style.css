@@ -1,0 +1,84 @@
+:root {
+    --header-font: 'IBM Plex Mono', monospace;
+    --lg-header-size: 2rem;
+    --md-header-size: 1.5rem;
+    --sm-header-size: 1rem;
+}
+ 
+body {
+   background-color: #F4F4F4;
+   margin: 0;
+   font-size: 14px;
+   font-family: 'Inter', serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 275px 1fr;
+    gap: 1.15rem;
+}
+
+.sidebar {
+    width: 275px;
+    position: fixed;
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.15rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.logo {
+  font-family: var(--header-font);
+  font-size: var(--lg-header-size);
+}
+
+.main {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  grid-column: 2 / 3;
+  padding-right: 24px;
+}
+
+.main-content {
+  display: grid;
+  grid-row: 2 / 5;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.15rem;
+}
+
+.projects {
+  display: grid;
+  grid-column: 1 / 4;
+  grid-auto-rows: min-content;
+}
+
+.projects-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.15rem;
+}
+.project {
+  flex: 1 1 250px;
+  justify-items: stretch;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.15em;
+}
+
+.welcome-header {
+  font-family: var(--header-font);
+  font-size: var(--md-header-size);
+  padding-top:1.15em;
+  padding-bottom:1.15em;
+}
+
+.section-header {
+  font-family: var(--header-font);
+  font-size: var(--sm-header-size);
+}
